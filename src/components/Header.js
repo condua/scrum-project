@@ -23,7 +23,7 @@ const Header = () => {
       <div style={{ width: '76%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
         <img className='logo' style={{ width: '110px', height: '100px', marginRight: '40px' }} alt='' src={logo} />
         <div className={`navbar ${isOpen ? 'open' : ''}`}>
-          {isMobileView && (
+          {/* {isMobileView && (
             <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>☰</div>
           )}
           <a href="/about">Về chúng tôi</a>
@@ -37,7 +37,7 @@ const Header = () => {
           </div>
           <a href="/quiz">Câu hỏi trắc nghiệm</a>
           <a href="/quizkahoot">Kahoot Quiz</a>
-          <a href="/ranking">Bảng xếp hạng</a>
+          <a href="/ranking">Bảng xếp hạng</a> */}
 
         </div>
       </div>

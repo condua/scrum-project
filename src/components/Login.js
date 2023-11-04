@@ -11,7 +11,7 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+        // Handle successful login, e.g., redirect the user or store authentication token in the state
         try {
           const response = await axios.post('https://example.com/api/login', {
             email: email,
@@ -19,7 +19,6 @@ const Login = () => {
           });
     
           console.log('Login successful!', response.data);
-          // Handle successful login, e.g., redirect the user or store authentication token in the state
         } catch (error) {
           console.error('Login failed!', error);
           // Handle login error, e.g., display an error message to the user

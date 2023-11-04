@@ -8,12 +8,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/home' element={<Home/>}/>
-
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
