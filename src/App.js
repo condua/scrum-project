@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import Login from './components/Login';
-import Register from './components/Register';
+import JoinRoom from './components/JoinRoom';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
+        <Route path='/joinroom' element={<JoinRoom/>}/>
       </Routes>
     </BrowserRouter>
   );
