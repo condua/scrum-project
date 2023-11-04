@@ -4,25 +4,24 @@ import { useMemo } from 'react';
 
 const Examlist = (data) => {
     console.log(data);
-    console.log(data.content);
     const columns = useMemo(() => {
         return [
             {
                 title: 'Id',
-                dataIndex: 'Id',
-                key: 'Id',
+                dataIndex: '_id',
+                key: '_id',
                 className: 'Id',
             },
             {
                 title: 'Tên',
-                dataIndex: 'Name',
-                key: 'Name',
+                dataIndex: 'name',
+                key: 'name',
                 className: 'Name',
             },
             {
                 title: 'Mã',
-                dataIndex: 'Password',
-                key: 'Password',
+                dataIndex: 'password',
+                key: 'password',
                 className: 'Password',
             },
         ];
@@ -31,7 +30,7 @@ const Examlist = (data) => {
         <div className='List'>
             <Table
             columns={columns}
-            dataSource={data}
+            dataSource={data.data}
             bordered={false}
             pagination={false}
         />
