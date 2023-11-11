@@ -1,9 +1,34 @@
 import React from 'react';
 import { Table } from 'antd';
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
+import { Button} from 'antd/es/radio';
+import { EyeOutlined, CloseCircleOutlined} from '@ant-design/icons';
 
 const Examlist = (data) => {
     console.log(data);
+    const renderAction = useCallback(
+        data => {
+            return (
+                <div className="Action">
+                        <Button
+                            size="small"
+                            className="my-btn"
+                           
+                        >
+                            <EyeOutlined/>
+                        </Button>
+                        <Button
+                            size="small"
+                            className="my-btn"
+                           
+                        >
+                            <CloseCircleOutlined />
+                        </Button>
+                </div>
+            );
+        },
+        []
+    );
     const columns = useMemo(() => {
         return [
             {
@@ -24,8 +49,14 @@ const Examlist = (data) => {
                 key: 'password',
                 className: 'Password',
             },
+            {
+                title: 'Hành động',
+                key: 'action',
+                width: 150,
+                render: renderAction,
+            },
         ];
-    },[]);
+    },[renderAction]);
     return (
         <div className='List'>
             <Table
